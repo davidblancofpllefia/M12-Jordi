@@ -1,0 +1,26 @@
+<html>
+    <body>
+        <h2 style="color: aquamarine;">
+            Hola
+        </h2>
+        <p>El nombre de la persona es: {{nombre_persona.upper}} {{cognom_persona.upper}}</p>
+        <p>Hoy es: {{fecha_actual.day}} / {{fecha_actual.month}} /  {{fecha_actual.year}}</p>
+        <p><strong>Temas:</strong></p>
+        <p>
+            <ul>
+            {% if temas %}
+                {% for elTema in temas %}
+
+                    <li>{{elTema}}</li>
+
+
+                {% endfor %}
+            {% else %}
+                <p>No hay nada que mostrar</p>
+            {% endif %}
+
+            </ul>
+
+        </p>
+    </body>
+</html>

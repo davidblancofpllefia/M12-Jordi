@@ -1,0 +1,22 @@
+<html>
+    <body>
+        <p>Los datos del habitante: {{nombre_habitant}} {{cognom_habitant}} {{any_habitant}} {{ciutat_habitant}}</p>
+        <p>Son las: {{fecha_actual.hour}}:{{fecha_actual.minute}}</p>
+        <p><strong>Moduls:</strong></p>
+        <p>
+            <ul>
+            {% if moduls %}
+                {% for elModul in moduls %}
+
+                    <li>{{elModul | capfirst}}</li>
+
+                {% endfor %}
+            {% else %}
+                <p>No hay nada que mostrar</p>
+            {% endif %}
+            </ul>
+
+        </p>
+       
+    </body>
+</html>
